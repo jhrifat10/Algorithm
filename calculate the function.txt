@@ -1,0 +1,55 @@
+//2*x*x*x-2*x-5 Function use in c
+#include <stdio.h>
+#include <math.h>
+double func(double x)
+{
+    return 2*x*x*x-2*x-5;
+}
+double e=.001;
+double c;
+void bisection (double a , double b )
+{
+if (func(a)*func(b)>=0)
+{
+    printf("incorect value");
+    return;
+}
+   int i; 
+  double c=(a+b)/2;
+    while (fabs(func(c))>e)
+    {
+        printf("s=%d\t",i);
+        i++;
+        printf("a=%.3lf\t",a);
+                printf("b=%.3lf\t",b);
+        printf("func(a)=%.3lf\t",func(a));
+        printf("func(b)=%.3lf\t",func(b));
+if(func(c)==0)
+{
+    break;
+}
+else if (func(c)<0)
+{
+    a=c;
+}
+      else
+      {
+          b=c;
+      }
+       printf("\n");
+        c=(a+b)/2;
+    }
+    printf("root value c=%.3lf",c);
+
+    
+    
+}
+
+int main() {
+double a=1,b=2;
+printf("initial a=%.3lf\n",a);
+printf("initial b=%.3lf\n",b);
+bisection(a,b);
+
+    return 0;
+}
