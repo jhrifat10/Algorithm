@@ -1,0 +1,17 @@
+
+#include <stdio.h>
+ int rifat(int x,int y )
+{
+    
+    int s=x+y;
+       
+return s;
+}
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+  int r=rifat(a,b);
+ printf("%d",r);
+    return 0;
+}
