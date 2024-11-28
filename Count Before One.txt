@@ -1,0 +1,41 @@
+
+
+
+#include <stdio.h>
+int count_before_one(int A[], int size )
+{
+   
+     int count=0 ;
+    for(int y=0;y<size;y++)
+   
+    {
+        if(A[y]==1)
+        {
+           break; 
+        }
+       count++;
+    }
+    
+    return count;
+    
+    
+}
+
+
+
+int main(){
+    int N;
+    scanf("%d",&N);
+    int A[N];
+    for(int i=0;i<N;i++)
+    {
+        scanf("%d",&A[i]);
+    }
+
+    int fq=count_before_one(A,N);
+    
+    printf("%d",fq);
+    
+    
+    return 0;
+}
